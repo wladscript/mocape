@@ -1,0 +1,60 @@
+/*
+ * Não usar com Tailwind: ele já inclui um reset próprio (Preflight).
+ * React / Next.js / Vite: importar no CSS global (index.css ou globals.css).
+ */
+
+:root {
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+    --container-max: 75rem;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh; /* fallback: vh para navegadores sem suporte a dvh */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+.container {
+    width: min(100% - 2 * var(--space-md), var(--container-max));
+    margin-inline: auto;
+}
